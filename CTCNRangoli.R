@@ -1,0 +1,177 @@
+#' @title CTCNRangoli
+#'
+#' @description  Color schemes for Sequencing Data Analysis
+#'
+#' @example
+#'  pancreas_integrated
+#' package::CTCNRangoli
+#'
+
+library("ggplot2")
+CTCN_colors<- c(`red`="#B00B1E",
+                `pink1`="#f38ff0",
+                `pink2`="#ffa5a5",
+                `brick`="#c96949",
+                `maroon`="#aa4371",
+                `rose`="#ffafbd",
+                `blue`="#016CE5",
+                `purple`="#AE23E7",
+                `yellow`="#cccc00",
+                `cyan`="#02cfd2",
+                `green`="#286841",
+                `neon`="#b4ffa3",
+                `turquoise1`="#01CACA",
+                `turquoise2`="#296572",
+                `violet`="#c18ab6",
+                `orange`="#ff8b3d",
+                `tan`="#9f6b08",
+                `cream`="#e7dec8",
+                `pastel1`="#f9e2cb",
+                `pastel2`="#ac97b4",
+                `gray`="#717285",
+                `dark`="#333549",
+                `navy`="#454476",
+                `khaki1`="#d5d0bc",
+                `khaki2`="#56452e",
+                `skin1`="#f5ad80",
+                `skin2`="#a25d33",
+                `skin3`="#cbaf87",
+                `skin4`="#e2cebd",
+                `magenta1`="#B82080",
+                `brown1`="#7f746c",
+                `brown2`="#5c463b",
+                `mango1`="#fcdb8d",
+                `mango2`="#edc988",
+                `mango3`="#ffbb91",
+                `teal1`="#065c6f",
+                `teal2`="#64958f",
+                `sky`="#70e1f5",
+                `coral`="#ff5e62",
+                `ocean1`="#9599e8",
+                `ocean2`="#3d7ea6",
+                `olive`="#696223",
+                `brinjal`="#2c0539",
+                `coffee`="#e2cebd",
+                `chai`="#3c2621",
+                `mint`="#5effc2",
+                `lime`="#e8ffc1")
+
+
+
+
+CTCN_cols <- function(...) {
+  cols <- c(...)
+
+  if (is.null(cols))
+    return (CTCN_colors)
+
+  CTCN_colors[cols]
+}
+
+CTCNpalettes<- list(
+  `main`  = CTCN_cols("sky","chai","coffee"),
+  `trio1` = CTCN_cols("gray", "neon","cyan"),
+  `trio2`=CTCN_cols("pink1", "navy", "cyan"),
+  `trio3`=CTCN_cols("pink1","maroon","sky"),
+  `quad1`=CTCN_cols("rose","sky","purple","ocean2"),
+  `quad2`=CTCN_cols("sky","coral","chai","coffee"),
+  `quad3`=CTCN_cols("magenta1","skin1","yellow","cyan"),
+  `quad4`=CTCN_cols("neon","teal1","teal2","coral"),
+  `pent1` = CTCN_cols("cream", "pastel1","pastel2","purple","brown1"),
+  `pent2`= CTCN_cols("khaki2", "skin1","pastel2","skin2","gray"),
+  `hexa1`=CTCN_cols("cream", "khaki1","pastel2","purple","gray","dark"),
+  `hexa2` = CTCN_cols("turquoise2","tan","orange","red","turquoise1","olive"),
+  `hepta1`=CTCN_cols("gray", "neon","cyan","purple","sky","maroon","ocean2"),
+  `hepta2`=CTCN_cols("coral","chai","coffee","teal2","yellow", "brick","magenta1"),
+  `octa1` = CTCN_cols("neon", "purple","red","orange","turquoise1","olive","tan","yellow"),
+  `octa2` = CTCN_cols("yellow", "coral", "maroon","pink2", "skin1","sky","skin2","pink1"),
+  `mixed1` = CTCN_cols("purple","orange","brown1","turquoise2","tan","pink1",
+                       "blue","pastel1","maroon","gray",
+                       "neon","cyan", "yellow", "red",
+                       "coral"),
+  `mixed2` = CTCN_cols("teal1","cyan","neon","cream","dark","chai","brown1",
+                       "coffee","rose","sky",
+                       "teal2","coral","magenta1","skin1","yellow",
+                       "purple","ocean2","pink1","navy","tan"),
+  `mixed3`= CTCN_cols("pink1","sky","purple","yellow","pink2",
+                     "red","coral","brown2","turquoise2","tan",
+                     "blue","maroon","green","coffee","turquoise1",
+                     "neon","pink1","navy","gray", "dark","rose","tan",
+                     "mango2","mango3"),
+  `mixed4`= CTCN_cols("olive","brinjal","gray", "neon","green",
+                     "mint","lime","chai","coffee",
+                     "pink1", "navy","rose","purple","ocean2",
+                     "blue","dark","violet","neon","rose",
+                     "coral","brick","tan","orange","mango1",
+                     "mango2","mango3","olive","yellow","pink2","sky"),
+  `mixed5`=CTCN_cols("blue","tan","coral","magenta1","mango3",
+                     "maroon","turquoise2","navy","turquoise1",
+                     "coral","coffee","skin1","yellow","orange",
+                     "brick", "maroon","pink2","neon","teal1","olive",
+                     "coffee","rose","sky","teal2","brinjal",
+                     "violet","khaki2","lime","mint",
+                     "cyan","pink1"),
+  `mixed6`=CTCN_cols("gray","pastel1","mango1","pastel2","mango2",
+                     "purple","ocean2","pink1","navy","tan",
+                     "cream","brinjal","sky","coral","skin1","skin2","skin3",
+                     "yellow","neon","turquoise1","teal1","cyan","coffee","pink2",
+                     "brown2","sky","brick", "maroon","orange",
+                     "olive","tan","turquoise2","navy",
+                     "coral","chai","coffee","teal2","yellow",
+                     "brick", "maroon","pink1","neon","teal1",
+                     "cyan","coffee","rose","sky","teal2",
+                     "coral","magenta1","mango3","blue","dark","violet",
+                     "khaki1","khaki2","lime","mint","brown1","rose"))
+
+
+#' Return function to interpolate a CTCN color palette
+#'
+#' @param palette Character name of palette in drsimonj_palettes
+#' @param reverse Boolean indicating whether the palette should be reversed
+#' @param ... Additional arguments to pass to colorRampPalette()
+#'
+
+CTCN_pal <- function(palette = "main", reverse = FALSE, ...) {
+  pal <- CTCNpalettes[[palette]]
+
+  if (reverse) pal <- rev(pal)
+
+  colorRampPalette(pal, ...)
+}
+
+#' Color scale constructor for CTCN colors
+#'
+#' @param palette Character name of palette in CTCNpalettes
+#' @param discrete Boolean indicating whether color aesthetic is discrete or not
+#' @param reverse Boolean indicating whether the palette should be reversed
+#' @param ... Additional arguments passed to discrete_scale() or
+#'            scale_color_gradientn(), used respectively when discrete is TRUE or FALSE
+#'
+CTCN_chroma<- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
+  pal <- CTCN_pal(palette = palette, reverse = reverse)
+
+  if (discrete) {
+    discrete_scale("colour", paste0("CTCN_", palette), palette = pal, ...)
+  } else {
+    scale_color_gradientn(colours = pal(256), ...)
+  }
+}
+
+#' Fill scale constructor for CTCN colors
+#'
+#' @param palette Character name of palette in CTCNpalettes
+#' @param discrete Boolean indicating whether color aesthetic is discrete or not
+#' @param reverse Boolean indicating whether the palette should be reversed
+#' @param ... Additional arguments passed to discrete_scale() or
+#'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
+#'
+CTCN_tint <- function(palette = "main", discrete = T, reverse = FALSE, ...) {
+  pal <- CTCN_pal(palette = palette, reverse = reverse)
+
+  if (discrete) {
+    discrete_scale("fill", paste0("CTCN_", palette), palette = pal, ...)
+  } else {
+    scale_fill_gradientn(colours = pal(256), ...)
+  }
+}
+
