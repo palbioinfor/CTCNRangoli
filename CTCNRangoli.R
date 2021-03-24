@@ -61,10 +61,10 @@ CTCN_colors<- c(`red`="#B00B1E",
 
 CTCN_cols <- function(...) {
   cols <- c(...)
-
+  
   if (is.null(cols))
     return (CTCN_colors)
-
+  
   CTCN_colors[cols]
 }
 
@@ -85,43 +85,43 @@ CTCNpalettes<- list(
   `hepta2`=CTCN_cols("coral","chai","coffee","teal2","yellow", "brick","magenta1"),
   `octa1` = CTCN_cols("neon", "purple","red","orange","turquoise1","olive","tan","yellow"),
   `octa2` = CTCN_cols("yellow", "coral", "maroon","pink2", "skin1","sky","skin2","pink1"),
-  `mixed1` = CTCN_cols("purple","orange","brown1","turquoise2","tan","pink1",
-                       "blue","pastel1","maroon","gray",
-                       "neon","cyan", "yellow", "red",
-                       "coral"),
+  `nona1`= CTCN_cols("yellow","pink1","maroon","orange","gray","tan", "neon","coral","sky"),
+  `nona2`= CTCN_cols("sky","chai","pastel2","teal2","blue","red","teal1","pink1","ocean1"),
+  `mixed1` = CTCN_cols("purple","orange","turquoise2","coral","tan","maroon",
+                       "blue","gray","brown1","neon","cyan", "yellow","pastel1", "red","pink1"),
   `mixed2` = CTCN_cols("teal1","cyan","neon","cream","dark","chai","brown1",
                        "coffee","rose","sky",
                        "teal2","coral","magenta1","skin1","yellow",
                        "purple","ocean2","pink1","navy","tan"),
-  `mixed3`= CTCN_cols("pink1","sky","purple","yellow","pink2",
-                     "red","coral","brown2","turquoise2","tan",
-                     "blue","maroon","green","coffee","turquoise1",
-                     "neon","pink1","navy","gray", "dark","rose","tan",
-                     "mango2","mango3"),
-  `mixed4`= CTCN_cols("olive","brinjal","gray", "neon","green",
-                     "mint","lime","chai","coffee",
-                     "pink1", "navy","rose","purple","ocean2",
-                     "blue","dark","violet","neon","rose",
-                     "coral","brick","tan","orange","mango1",
-                     "mango2","mango3","olive","yellow","pink2","sky"),
-  `mixed5`=CTCN_cols("blue","tan","coral","magenta1","mango3",
-                     "maroon","turquoise2","navy","turquoise1",
-                     "coral","coffee","skin1","yellow","orange",
-                     "brick", "maroon","pink2","neon","teal1","olive",
-                     "coffee","rose","sky","teal2","brinjal",
+  `mixed3`= CTCN_cols("pink1","sky","yellow","blue","maroon",
+                      "red","coral","brown2","turquoise2","tan","purple",
+                      "green","coffee","turquoise1",
+                      "neon","navy","gray", "dark","rose","tan",
+                      "mango2","mango3"),
+  `mixed4`= CTCN_cols("olive","mango1","gray","rose", "neon","violet","green",
+                      "mint","lime","chai","coffee",
+                      "pink1", "navy","purple","ocean2","brinjal",
+                      "blue","dark",
+                      "coral","brick","tan","orange",
+                      "mango2","mango3","yellow","pink2","sky"),
+  `mixed5`=CTCN_cols("blue","tan","coral","magenta1","mango3","teal1",
+                     "maroon","turquoise1",
+                     "coffee","skin1","yellow","orange",
+                     "brick","pink1","neon","olive","navy",
+                     "rose","sky","teal2","brinjal",
                      "violet","khaki2","lime","mint",
-                     "cyan","pink1"),
-  `mixed6`=CTCN_cols("gray","pastel1","mango1","pastel2","mango2",
-                     "purple","ocean2","pink1","navy","tan",
-                     "cream","brinjal","sky","coral","skin1","skin2","skin3",
-                     "yellow","neon","turquoise1","teal1","cyan","coffee","pink2",
-                     "brown2","sky","brick", "maroon","orange",
-                     "olive","tan","turquoise2","navy",
-                     "coral","chai","coffee","teal2","yellow",
-                     "brick", "maroon","pink1","neon","teal1",
-                     "cyan","coffee","rose","sky","teal2",
-                     "coral","magenta1","mango3","blue","dark","violet",
-                     "khaki1","khaki2","lime","mint","brown1","rose"))
+                     "cyan","pink2"),
+  `mixed6`=CTCN_cols("brick","mango2","pink2","cyan",
+                     "purple","ocean2","tan","gray","pastel1","mango1",
+                     "skin1","brown2","orange",
+                     "pastel2","neon","yellow","coral","teal1",
+                     "coffee","brinjal","sky","turquoise1","mango3","dark","navy",
+                     "olive","turquoise2","skin3",
+                     "chai","teal2","khaki1","violet","lime","mint","khaki2","brown1",
+                     "navy", "maroon","pink1",
+                     "skin1",
+                     "magenta1",
+                     "rose"))
 
 
 #' Return function to interpolate a CTCN color palette
@@ -133,9 +133,9 @@ CTCNpalettes<- list(
 
 CTCN_pal <- function(palette = "main", reverse = FALSE, ...) {
   pal <- CTCNpalettes[[palette]]
-
+  
   if (reverse) pal <- rev(pal)
-
+  
   colorRampPalette(pal, ...)
 }
 
@@ -149,7 +149,7 @@ CTCN_pal <- function(palette = "main", reverse = FALSE, ...) {
 #'
 CTCN_chroma<- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
   pal <- CTCN_pal(palette = palette, reverse = reverse)
-
+  
   if (discrete) {
     discrete_scale("colour", paste0("CTCN_", palette), palette = pal, ...)
   } else {
@@ -167,7 +167,7 @@ CTCN_chroma<- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) 
 #'
 CTCN_tint <- function(palette = "main", discrete = T, reverse = FALSE, ...) {
   pal <- CTCN_pal(palette = palette, reverse = reverse)
-
+  
   if (discrete) {
     discrete_scale("fill", paste0("CTCN_", palette), palette = pal, ...)
   } else {
