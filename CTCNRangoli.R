@@ -1,13 +1,3 @@
-#' @title CTCNRangoli
-#'
-#' @description  Color schemes for Sequencing Data Analysis
-#'
-#' @example
-#'  pancreas_integrated
-#' package::CTCNRangoli
-#'
-
-library("ggplot2")
 CTCN_colors<- c(`red`="#B00B1E",
                 `pink1`="#f38ff0",
                 `pink2`="#ffa5a5",
@@ -54,7 +44,48 @@ CTCN_colors<- c(`red`="#B00B1E",
                 `coffee`="#e2cebd",
                 `chai`="#3c2621",
                 `mint`="#5effc2",
-                `lime`="#e8ffc1")
+                `lime`="#e8ffc1",
+                `dirt1`="#786A0F",
+                `dirt2`="#CEB513",
+                `dirt3` ="#D9CD81",
+                `lav`="#C181D9",
+                `lav1`="#d6cbd3",
+                `peach`="#ffcccc",
+                `choc1`="#b9936c",
+                `choc2`="#dac292",
+                `choc3`="#c4b7a6",
+                `choc4`="#e6e2d3",
+                `dirtgreen`="#bdcebe",
+                `dirtorange`="#f7786b",
+                `dirtpink`="#f7cac9",
+                `dirtblue`="#034f84",
+                `dirtsky`="#92a8d1",
+                `dirtmango`="#ffef96",
+                `dirtpurple`="#50394c",
+                `dirtslate`="#b2b2b2",
+                `dirtbeige`="#f4e1d2",
+                `dirtteal`="#618685",
+                `tutifruti1`="#439e78",
+                `tutifruti2`="#f6af45",
+                `tutifruti3`="#f2b8af",
+                `tutifruti4`="#9fb3c2",
+                `tutifruti5`="#ec685c",
+                `sana1`="#CBE4F9",
+                `sana2`="#CDF5F6",
+                `sana3`="#EFF9DA",
+                `sana4`="#F9EBDF",
+                `sana5`="#F9D8D6",
+                `sana6`="#D6CDEA",
+                `sana7`="#A1E2D2",
+                `sana8`="#A4E4F4",
+                `sana9`="#BFE3DF",
+                `sana10`="#52E8E6",
+                `sana11`="#C9A2CA",
+                `sana12`="#EAEBFF",
+                `sana13`="#F9DEFF",
+                `sana14`="#D7FDDF",
+                `sana15`="#FFD1D1"
+)
 
 
 
@@ -69,7 +100,18 @@ CTCN_cols <- function(...) {
 }
 
 CTCNpalettes<- list(
-  `main`  = CTCN_cols("sky","chai","coffee"),
+  `main1`  = CTCN_cols("sky","chai","coffee"),
+  `main2`  = CTCN_cols("tutifruti1","tutifruti2","tutifruti3","tutifruti4","tutifruti5"),
+  `main3`  = CTCN_cols("dirtmango",
+                       "dirtpurple",
+                       "dirtslate",
+                       "dirtbeige",
+                       "dirtteal"),
+  `main4`  = CTCN_cols("dirtsky",
+                       "dirtblue",
+                       "dirtpink",
+                       "dirtpink",
+                       "dirtorange","dirtgreen"),
   `trio1` = CTCN_cols("gray", "neon","cyan"),
   `trio2`=CTCN_cols("pink1", "navy", "cyan"),
   `trio3`=CTCN_cols("pink1","maroon","sky"),
@@ -86,12 +128,12 @@ CTCNpalettes<- list(
   `octa1` = CTCN_cols("neon", "purple","red","orange","turquoise1","olive","tan","yellow"),
   `octa2` = CTCN_cols("yellow", "coral", "maroon","pink2", "skin1","sky","skin2","pink1"),
   `nona1`= CTCN_cols("yellow","pink1","maroon","orange","gray","tan", "neon","coral","sky"),
-  `nona2`= CTCN_cols("sky","chai","pastel2","teal2","blue","red","teal1","pink1","ocean1"),
+  `nona2`= CTCN_cols("sky","chai","teal2","blue","red","teal1","pink1","pastel2","ocean1"),
   `mixed1` = CTCN_cols("purple","orange","turquoise2","coral","tan","maroon",
                        "blue","gray","brown1","neon","cyan", "yellow","pastel1", "red","pink1"),
-  `mixed2` = CTCN_cols("teal1","cyan","neon","cream","dark","chai","brown1",
-                       "coffee","rose","sky",
-                       "teal2","coral","magenta1","skin1","yellow",
+  `mixed2` = CTCN_cols("teal1","cyan","cream","dark","chai","brown1",
+                       "coffee",
+                       "teal2","coral","rose","sky","neon","magenta1","skin1","yellow",
                        "purple","ocean2","pink1","navy","tan"),
   `mixed3`= CTCN_cols("pink1","sky","yellow","blue","maroon",
                       "red","coral","brown2","turquoise2","tan","purple",
@@ -115,14 +157,18 @@ CTCNpalettes<- list(
                      "purple","ocean2","tan","gray","pastel1","mango1",
                      "skin1","brown2","orange",
                      "pastel2","neon","yellow","coral","teal1",
-                     "coffee","brinjal","sky","turquoise1","mango3","dark","navy",
+                     "coffee","brinjal","sky","turquoise1","mango3","dark",
                      "olive","turquoise2","skin3",
                      "chai","teal2","khaki1","violet","lime","mint","khaki2","brown1",
                      "navy", "maroon","pink1",
                      "skin1",
                      "magenta1",
-                     "rose"))
-
+                     "rose"),
+  `mixed7`=CTCN_cols(	"brick",'dirt2',"orange",	'dirt3',	'lav',"sky",	'lav1',"mango2",	'peach',"lime","brinjal",	'choc1',"ocean2",	'choc2',"teal2",	'choc3',"navy",	'choc4',"navy", 	'dirtgreen',	'dirtorange',	'tutifruti5','dirtpink',	'dirtblue',	'dirtsky',	'dirtmango',	'dirtpurple',	'dirtslate',	'dirtbeige',	'tutifruti1','dirtteal',	'tutifruti2',	'tutifruti3',	'tutifruti4',	"maroon",'dirt1'),
+  
+  `tutifruti`=CTCN_cols("tutifruti1","tutifruti2","tutifruti3","tutifruti4","tutifruti5"),
+  
+  `sana`=CTCN_cols("sana7","sana2","tutifruti3","sana4",'lav',"sky","sana6","sana14","sana14","sana10","sana12","sana9","sana1","sana13","sana15","sana11","tutifruti2"))
 
 #' Return function to interpolate a CTCN color palette
 #'
