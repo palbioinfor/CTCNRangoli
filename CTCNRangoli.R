@@ -113,7 +113,19 @@ CTCN_colors<- c(`red`="#B00B1E",
                 `celltype18`="#ccccf4",
                 `white1`="#efefef",
                 `white2`="#e5f4fb",
-                `bckg`="#e6d9d9"
+                `bckg`="#e6d9d9",
+                `Glutamatergic`= "#2DADE1",
+                `Gabaergic`= "#D7211C",
+                `Astrocytes`= "#FFBD33",
+                `Oligodendrocytes`= "#AF01E4",
+                `OPCs`= "#FE00FF",
+                `Microglia`= "#008F1F",
+                `Immune_other`= "#73C993",
+                `Endothelial`= "#FEA286",
+                `Pericytes`= "#DFABCB",
+                `VLMC`= "#645B45",
+                `SMC`= "#9F9B21",
+                `Mixed`= "#B4B4B4"
 )
 
 
@@ -234,7 +246,14 @@ CTCNpalettes<- list(
                       "sky"),
   `roche7_1`= CTCN_cols("celltype17","celltype8","red","celltype14",
                         "celltype9","celltype12","sky","teal1",
-                        "celltype11"))
+                        "celltype11"),
+  `print` = CTCN_cols("Glutamatergic","Gabaergic",
+                      "Astrocytes",
+                      "Oligodendrocytes",
+                      "OPCs",
+                      "Microglia",
+                      "Endothelial",
+                      "Pericytes"))
 
 #' Return function to interpolate a CTCN color palette
 #'
@@ -286,4 +305,3 @@ CTCN_tint <- function(palette = "main", discrete = T, reverse = FALSE, ...) {
     scale_fill_gradientn(colours = pal(256), ...)
   }
 }
-
