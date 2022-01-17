@@ -248,7 +248,7 @@ CTCNpalettes<- list(
                         "sana14", "sana15", "dirtslate","dirtbeige","dirtteal", "tutifruti1", "tutifruti2","tutifruti3",
                         "tutifruti4","tutifruti5", "sana1","sana2","sana3","sana4", "sana5", "sana6","celltype17","celltype8","red","celltype14",
                         "celltype9","celltype12","sky","teal1",
-                        "celltype11",),
+                        "celltype11"),
   `roche7`= CTCN_cols("celltype17","celltype11","celltype14",
                       "celltype8","celltype12","celltype9","red","teal1",
                       "sky"),
