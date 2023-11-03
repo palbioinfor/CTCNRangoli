@@ -160,7 +160,7 @@ CTCNpalettes<- list(
   `trio1` = CTCN_cols("gray", "neon","cyan"),
   `trio2`=CTCN_cols("pink1", "navy", "cyan"),
   `trio3`=CTCN_cols("pink1","maroon","sky"),
-  `trio4` =CTCN_cols("CBskb","CBbl","CBgr"),
+  `trio4` =CTCN_cols("CBgr","CBskb","CBbl"),
   `quad1`=CTCN_cols("rose","sky","purple","ocean2"),
   `quad2`=CTCN_cols("sky","coral","chai","coffee"),
   `quad3`=CTCN_cols("magenta1","skin1","yellow","cyan"),
