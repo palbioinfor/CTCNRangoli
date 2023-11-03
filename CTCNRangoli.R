@@ -125,7 +125,11 @@ CTCN_colors<- c(`red`="#B00B1E",
                 `Pericytes`= "#DFABCB",
                 `VLMC`= "#645B45",
                 `SMC`= "#9F9B21",
-                `Mixed`= "#B4B4B4"
+                `Mixed`= "#B4B4B4",
+                `CBskb`="#a6cee3",
+                `CBbl`="#1f78b4",
+                 `CBgr`="#b2df8a"
+                
 )
 
 
@@ -156,6 +160,7 @@ CTCNpalettes<- list(
   `trio1` = CTCN_cols("gray", "neon","cyan"),
   `trio2`=CTCN_cols("pink1", "navy", "cyan"),
   `trio3`=CTCN_cols("pink1","maroon","sky"),
+  `trio4` =CTCN_cols("CBskb","CBbl","CBgr"),
   `quad1`=CTCN_cols("rose","sky","purple","ocean2"),
   `quad2`=CTCN_cols("sky","coral","chai","coffee"),
   `quad3`=CTCN_cols("magenta1","skin1","yellow","cyan"),
