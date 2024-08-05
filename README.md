@@ -24,5 +24,6 @@ library(Seurat)
 load("pancreas.integrated.three.rda")
 DimPlot(pancreas.integrated_, group.by = "tech")+CTCN_chroma("quad1")
 DimPlot(pancreas.integrated_, group.by = "celltype")+CTCN_chroma("pal_victoria")
+DimPlot(pancreas.integrated_, group.by = "celltype")+CTCN_chroma("pal_pallavi")
 
 
