@@ -261,7 +261,7 @@ CTCNpalettes<- list(
                        "dirtpink",
                        "dirtpink",
                        "dirtorange","dirtgreen"),
-  `trio1` = CTCN_cols("gray", "neon","cyan"),
+  `trio1` = CTCN_cols("coral", "mint","cyan"),
   `trio2`=CTCN_cols("pink1", "navy", "cyan"),
   `trio3`=CTCN_cols("pink1","maroon","sky"),
   `trio4` =CTCN_cols("CBgr","CBskb","CBbl"),
